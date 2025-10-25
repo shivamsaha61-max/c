@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+   char ipChar;
+   int asciiValue;
+   printf("Enter character:");
+   scanf("%c",&ipChar);
+   asciiValue=ipChar;
+   if(asciiValue>=65 && asciiValue<=90){
+       printf("\nThe character is an uppercase");
+   }
+   else if(asciiValue>=97 && asciiValue<=122){
+       printf("\nThe character is lower case");
+   }
+   else if(asciiValue>=48 && asciiValue<=57){
+       printf("\nThe character is a digit");
+   }
+   else{
+       printf("\nThe characteris a miscellaneous symbol");
+   }
+   
+    
+    return 0;
+}
