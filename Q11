@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+  int males, females;
+    double genderRatio;
+    printf("Enter the number of males: ");
+    scanf("%d", &males);
+
+    printf("Enter the number of females: ");
+    scanf("%d", &females);
+
+    if (females == 0) {
+        printf("Cannot calculate gender ratio: Number of females is zero.\n");
+    } else {
+        genderRatio = (double)males / females * 100;
+        printf("The gender ratio (males per 100 females) is: %.2f\n", genderRatio);
+    }
+
+    return 0;
+}
