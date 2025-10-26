@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int i;
+    printf("Enter a positive number:");
+    scanf("%d",&n);
+    if(n<0){
+        printf("\nInvalid number");
+    }
+    for(i=1;i<=n;i++){
+        printf("\n%d",i);
+    }
+    return 0;
+}
