@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, left, right, temp;
+    int arr[5];
+    for(i = 0; i < 5; ++i)
+    {
+        printf("\nEnter arr[%d]: ",i);
+        scanf("%d",&arr[i]);
+    }
+    printf("\nOriginal array is as follows: ");
+    for(i = 0; i < 5; ++i)
+    {
+        printf("arr[%d] = %d\t",i,arr[i]);
+    }
