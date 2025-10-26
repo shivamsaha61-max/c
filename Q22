@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    printf("Enter a number:");
+    scanf("%d",&number);
+   
+    if(number%3==0 && number%5==0){
+        printf("\nThe number is divisible by both 3 & 5");
+    }
+    else{
+        printf("\nThe number is not divisable by both 3 & 5");
+    }
+   
+    return 0;
+}
