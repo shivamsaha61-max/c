@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    char citizenship;
+    char criminalRecord;
+    int eligible = 1;  
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Are you a citizen? (Y/N): ");
+    scanf(" %c", &citizenship);  
+
+    printf("Do you have a criminal record? (Y/N): ");
+    scanf(" %c", &criminalRecord);
+    if (age < 18) {
+        printf("Not eligible: Age is less than 18.\n");
+        eligible = 0;
+    }
+
+    if (citizenship != 'Y' && citizenship != 'y') {
+        printf("Not eligible: Not a citizen.\n");
+        eligible = 0;
+    }
+
+    if (criminalRecord == 'Y' || criminalRecord == 'y') {
+        printf("Not eligible: Has a criminal record.\n");
+        eligible = 0;
+    }
+    if (eligible) {
+        if (age >= 60) {
+            printf("Senior Citizen Eligible\n");
+        } else {
+            printf("Eligible\n");
+        }
+    }
+
+    return 0;
+}
