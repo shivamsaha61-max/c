@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+   int sub1,sub2,sub3;
+   float avg;
+   printf("Enter marks of three subjects:");
+   scanf("%d %d %d",&sub1 , &sub2 , &sub3);
+   avg=(sub1+sub2+sub3)/3.0f ; 
+   if(avg>=60 || sub1>=80 || sub2>=80 || sub3>=80){
+       printf("\nGood result");
+   }
+        return 0;
+}
