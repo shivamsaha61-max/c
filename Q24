@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    if(n>=100 && n<=999){
+        printf("\nThis is a three digit number");
+        if(n%3==0){
+            printf("\nThe number is divisible by 3");
+        }
+    }
+    else{
+        printf("\nThis is not a three dight number");
+    }
+    
+    
+    return 0;
+}
