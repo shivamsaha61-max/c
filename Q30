@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    float height, weight, bmi;
+    int age;
+    printf("Enter height in meters: ");
+    scanf("%f", &height);
+
+    printf("Enter weight in kilograms: ");
+    scanf("%f", &weight);
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+    if (height <= 0) {
+        printf("Invalid height. Height must be greater than 0.\n");
+        return 1;
+    }
+    bmi = weight / (height * height);
+    printf("BMI: %.2f\n", bmi);
+    if (bmi < 18.5) {
+        printf("Classification: Underweight\n");
+    } else if (bmi < 25) {
+        printf("Classification: Normal\n");
+    } else if (bmi < 30) {
+        printf("Classification: Overweight\n");
+        if (age > 40) {
+            printf("Consult doctor\n");
+        }
+    } else {
+        printf("Classification: Obese\n");
+        if (age > 40) {
+            printf("Consult doctor\n");
+        }
+    }
+
+    return 0;
+}
