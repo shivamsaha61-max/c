@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    float weight;
+    char courier_type;
+    float total_cost = 0.0;
+    
+    
+    printf("Enter the weight of the parcel in kilograms: ");
+    scanf("%f", &weight);
+    
+    
+    printf("Enter the type of courier ('I' for International, 'D' for Domestic): ");
+    scanf(" %c", &courier_type); 
+    
+    
+    courier_type = toupper(courier_type);
+    
+    
+    if (weight <= 0) {
+        printf("Invalid weight. Please enter a weight greater than 0.\n");
+        return 1; 
+    }
+    
+    if (courier_type != 'I' && courier_type != 'D') {
+        printf("Invalid courier type. Please enter 'I' or 'D'.\n");
+        return 1; 
+    }
+    
+    
+    if (weight <= 5) {
+        total_cost = weight * 800; 
+    } else if (weight <= 10) {
+        
+        total_cost = (5 * 800) + ((weight - 5) * 700);
+    } else {
+        
+        total_cost = (5 * 800) + (5 * 700) + ((weight - 10) * 500);
+    }
+    
+    
+    if (courier_type == 'I') {
+        total_cost += 1500;
+    }
+    
+    
+    printf("\n--- Courier Charges ---");
+    printf("\nWeight of Parcel: %.2f kg", weight);
+    printf("\nCourier Type: %s", (courier_type == 'I') ? "International" : "Domestic");
+    printf("\nTotal Cost: Rs. %.2f", total_cost);
+    printf("\n");
+    
+    return 0;
+
+}
